@@ -11,7 +11,7 @@ pipeline {
         stage ("SourceCheckout") {
             steps {
                 git credentialsId: 'github_credentials',
-                    url: environment.GIT_URL
+                    url: ${GIT_URL}
             }
         }
     }
